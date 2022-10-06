@@ -1,12 +1,27 @@
 # Credit_Risk_Analysis
 
-Deliverable 4: Written Report on the Credit Risk Analysis (30 points)
-Deliverable 4 Instructions
-For this deliverable, you’ll write a brief summary and analysis of the performance of all the machine learning models used in this Challenge.
+### Overview
+#### This analysis shows various machine learning models to evaluate credit risk for individual customers. The data set used for these models was from LendingClub, a peer-to-peer lending service. The first task was to clean the data and make sure that all of the data was readable by the learning models. After the data was cleaned it was heavily unbalanced with only 347 of the 68,817 entries being "high-risk" so now we will go over the different models and try to determine the best option for LendingClub. 
+![Image_1](https://github.com/walzfran/Credit_Risk_Analysis/blob/main/images/y_counts.png)
 
-The report should contain the following:
+#### Models Used:
+#### * RandomOverSampler
+#### * SMOTE
+#### * ClusterCentroids
+#### * SMOTEENN
+#### * BalancedRandomForestClassifier
+#### * EasyEnsembleClassifier
 
-Overview of the analysis: Explain the purpose of this analysis.
+### Results 
+#### When looking at the different models used, we will be looking at the Balanced Accuracy Score (balanced_accuracy_score) as well as the Imbalanced Classification Report (classification_report_imbalanced). When going over the Imbalanced Classification Report the most important column to look at is "f1" this column shows the 'F-Score' which measures the accuracy of the test, we will be able to see the score from the high risk, low risk and an average. 
+
+The following results are presented in ascending order based on the Balanced Accuracy Score. 
+
+
+
+
+
+
 
 Results: Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
 
