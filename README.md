@@ -54,12 +54,22 @@ This model had the same score for 'high_risk' as Combination Sampling, .02 but h
 ![Image_8](https://github.com/walzfran/Credit_Risk_Analysis/blob/main/images/SMOTE_f1.png)
 
 ### * Balanced Random Forest Classifier 
+When looking at the results from Balanced Random Forest Classifier, we see that it has improved quite a bit from the last models we analyzed. The score of this model was 78.85% which is over 3/4ths accurate which would suffice but hopefully we can find a better model to recommend to LendingClub. 
 
+![Iamge_9](https://github.com/walzfran/Credit_Risk_Analysis/blob/main/images/Forest_score.png)
 
+This model had better scores for 'high_risk' coming in at .06 with an average of .93 which is quite a bit higher than we have seen with the last 4 models. 
 
+![Image_10](https://github.com/walzfran/Credit_Risk_Analysis/blob/main/images/Forest_f1.png)
 
+### * Easy Ensemble AdaBoost Classifier 
+The results from this model were the best, the accuracy score is 93.16% which is very good, acceptable for LendingClub to use when determining loan risk. 
 
-Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+![Image_11](https://github.com/walzfran/Credit_Risk_Analysis/blob/main/images/Easy_score.png)
 
+The F-Scores were also the best of the 6 models we analyzed with the 'high_risk' coming in at .16, this is the only model that was over .1. The average score being .97 which is again the highest we have seen in the models used. 
 
-In conclusion, credit-risk is a difficult thing to predict, even for advanced machine learning algorithms with 93 columns of data to process. While the Easy Ensemble AdaBoost Classifier model had the highest overall accuracy, this was largely due to the fact that the dataset was so radically unbalanced. Even when it's balanced accuracy and average F-score were above 90%, it's F-score for high-risk prediction was no better than 0.16. In the end, I would advise against using any of these algorithms, as it would put creditors as too great of risk being unable to accurately predict who the high-risk clients/debtors would be.
+![Image_12](https://github.com/walzfran/Credit_Risk_Analysis/blob/main/images/Easy_f1.png)
+
+### Summary 
+#### After looking at the results from all of the models tested, if there was one model I had to chose I would suggest that LendingClub use the Easy Ensemble AdaBoost Classifier. With the accuracy score bing over 90% it seems like it would be an easy choice. But one concern that I have is that when looking at the F-Scores, there is still a big gap in accuracy of 'high_risk' to 'low_risk' with .16 for high risk and .97 for low risk. The large gap would probably come from there being such a large difference in the data set from high to low risk loans meaning the learning model has to fill in quite a bit and has low accuracy on determining the high risk loans. I would want to test this model a few more times on potantial datasets before saying with confidence that LendingClub should go forward with using Easy Ensemble AdaBoost Classifier. 
